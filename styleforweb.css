@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    max-height: fit-content;
+    
+}
+body{
+    min-height: 100vh;
+    width: 100vh;
+    overflow-x: hidden;
+}
+.main{
+    scroll-behavior: smooth;
+    scroll-margin-left: none;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(round.jpg);
+    opacity: 1.0;
+}
+.topbar{
+    
+    /* background-color: black; */
+    background-image: url(rain.jpg);
+    opacity: 0.95;
+    height: 9vh;
+    width: 100vw;
+}
+.topbaritems{
+    position: relative;
+    left: 63vw;
+}
+a{
+   text-decoration: none;
+   color: rgb(250, 4, 53);
+   position: relative;
+   top: 2.5vh;
+   left: 0px;
+   margin-right: 4px;
+   padding: 4px;
+   letter-spacing: 2px;
+   display: inline-flex;
+   height: 20px;
+   align-items: center;
+   border-radius: 8px;
+   width: auto;
+   font-family: 'Monoton', cursive;
+   font-size: 16px;
+   cursor: pointer;
+}
+a::before{
+    content: "";
+    position: absolute;
+    /* height: 4px; */
+    left: 12%;
+    right: 12%;
+    width: 76%;
+    background:linear-gradient(to right,#fd004c,#fe9000,#fff020,#3edf4b,#3363ff,#b102b7);
+    background-size: 200% 100%;
+    bottom: -0.5px;
+    transition: 1.5s;
+}
+
+a:hover::before{
+    background-position: 100% 0;
+    height: 4.7px;
+    border-radius: 4px;
+    
+}
+a:hover{
+   color: cyan;
+   opacity: 1.5;
+   font-size: 17px;
+   position: relative;
+}
+
+h1{
+    position: relative;
+    top: 30vh;
+    display: flex;
+    font-size: 50px;
+    font-weight: bold;
+    justify-content: center;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(raindrop.png);
+    background-size: cover;
+    color: transparent;
+    -webkit-background-clip: text;
+}
+@media screen and (max-width: 600px){
+    h1{
+        font-size: 30px;
+    }
+    topbar{
+        height: 5vh;
+        width: fit-content;
+    }
+}
